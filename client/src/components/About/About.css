@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.AboutParent {
+  display: flex;
+  width: 100vw;
+  height: 92vh;
+}
+
+.AboutChildLeft {
+  max-width: 50%;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 8%;
+}
+
+.greet{
+    font-size: 40px;
+    font-family: "Caveat"
+}
+
+.name {
+  background: #cd408f;
+  font-size: 100px;
+  background: linear-gradient(to top left, #cd408f 26%, #094fc3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Caveat"
+}
+
+.who{
+  background: #cd408f;
+  font-size: 60px;
+  background: linear-gradient(to top left, #cd408f 26%, #094fc3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Caveat"
+}
+
+.AboutChildLeft h5, p{
+    margin: 3% 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.AboutChildLeft h5 {
+    font-size: 18px;
+}
+
+.AboutChildLeft p {
+    line-height: 1.6;
+}
+
+.AboutChildRight {
+  max-width: 50%;
+  min-width: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageAnimation {
+  -webkit-mask-image: url("../../assets/Faizan_Computer_Desk.jpg");
+  mask-image: url("../../assets/Faizan_Computer_Desk.jpg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  max-width: 75%;
+  max-height: 80%;
+  border: none;
+  overflow: hidden;
+}
+
+.compImg {
+  -webkit-animation: spin 2s linear infinite;
+  -moz-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin: -13% -32%;
+  overflow: hidden;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

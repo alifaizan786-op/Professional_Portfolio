@@ -1,0 +1,22 @@
+{
+  "name": "professional_portfolio",
+  "version": "1.0.0",
+  "description": "A professional portfolio, for Faizan Ali.Highlight his work in professional life",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alifaizan786-op/Professional_Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alifaizan786-op/Professional_Portfolio/issues"
+  },
+  "homepage": "https://github.com/alifaizan786-op/Professional_Portfolio#readme",
+  "dependencies": {
+    "concurrently": "^7.2.1"
+  }
+}

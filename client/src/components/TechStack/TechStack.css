@@ -1,0 +1,88 @@
+.techStackParent {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.techStackChildLeft {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.techStackGrandChildLeft {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.techStackGrandChildLeft ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.techStackGrandChildLeft img {
+  width: 200px;
+}
+
+.techStackGrandChildLeft li {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 250px;
+  height: 250px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+}
+
+@keyframes bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.techStackGrandChildLeft li:hover {
+  background-color: #d3d3d3;
+}
+
+.techStackChildRight {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 6%;
+}
+
+.techStackGrandChildRight h1 {
+  background: #cd408f;
+  font-size: 75px;
+  background: linear-gradient(to top left, #cd408f 26%, #094fc3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Caveat";
+}
+
+.techStackGrandChildRight p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.techStackGrandChildRight a {
+    color: #1976d2;
+    text-decoration: underline;
+}
+
+
