@@ -61,10 +61,10 @@ export default function Header() {
           <li>
             <Button
               onClick={() =>
-                window.open("https://www.geeksforgeeks.org", "_blank")
+                window.location.href = '#work'
               }
             >
-              Resume
+              Work
             </Button>
           </li>
           <li>
@@ -73,7 +73,7 @@ export default function Header() {
                 window.open("https://www.geeksforgeeks.org", "_blank")
               }
             >
-              Work
+              Resume
             </Button>
           </li>
         </ul>

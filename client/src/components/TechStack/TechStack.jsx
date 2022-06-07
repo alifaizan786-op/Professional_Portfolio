@@ -90,6 +90,8 @@ export default function TechStack(){
                                         <img src={tech.image} alt="" />
                                     </a>
                                 </Tooltip>
+                                <div className="shadow">
+                                </div>
                             </li>
                         ))}
                     </ul>
@@ -101,6 +103,8 @@ export default function TechStack(){
                                         <img src={tech.image} alt="" />
                                     </a>
                                 </Tooltip>
+                                <div className="shadow">
+                                </div>
                             </li>
                         ))}
                     </ul>
@@ -112,6 +116,8 @@ export default function TechStack(){
                                         <img src={tech.image} alt="" />
                                     </a>
                                 </Tooltip>
+                                <div className="shadow">
+                                </div>
                             </li>
                         ))}
                     </ul>
@@ -146,6 +152,12 @@ export default function TechStack(){
                         </a>
                         &nbsp;. That most of these guru's call money stealing schemes. It proved very profounding to me, did it cost me alot ? Yes.
                         Did it cost me alot of time ? Yes. But to serve my clients better, it was well worth it
+                    </p>
+                    <p>
+                        At my bootcamp, I started my journey with HTML, CSS and Javascript. I learnt the basics of HTML, CSS, Javascript.
+                        and Version Control with github. After which we eased into using 3rd party libraries like JQuery, BootStrap, NodeJS, ReactJS.
+                        Then we started to learn databases in query language, were first we focused on MySQL, then MongoDB, along with Graphql.
+                        Towards the end of the bootcamp, I had observed MERN Stack to be my strength and decided to stick with it. 
                     </p>
                 </div>
             </div>

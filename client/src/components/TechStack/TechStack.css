@@ -24,18 +24,15 @@
   justify-content: space-evenly;
 }
 
-.techStackGrandChildLeft img {
-  width: 200px;
-}
 
-.techStackGrandChildLeft li {
+.techStackGrandChildLeft img {
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-name: bounce-1;
@@ -52,6 +49,17 @@
   100% {
     transform: translateY(0);
   }
+}
+
+.shadow{
+  height: 10px;
+  width: 50%;
+  background-color: black;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  opacity: 0.3;
+  filter: blur(5px);
 }
 
 .techStackGrandChildLeft li:hover {
