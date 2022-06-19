@@ -41,19 +41,29 @@
 
 .workchildRightGrandChildLeft h1, h3, p, h4{
   padding-bottom: 10px;
+  transition-delay: 1s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
 }
 
 .workchildRightGrandChildLeft p {
   font-size: 18px;
   line-height: 25px;
+  transition-delay: 1s;
+  transition-property: all;
 }
 
 .workchildRightGrandChildLeft a {
   color: #1976d2;
-  text-decoration: underline;
 }
 
+.workchildRightGrandChildLeft a:hover {
+  color: #cd408f;
+}
 
+.workchildRightGrandChildLeft a::before {
+  content: "\00a0 ";
+}
 
 .workchildRightGrandChildRight{
   width: 45vw;
@@ -87,50 +97,37 @@
   transition: opactiy 2s;
 }
 
-.workSlideBtn1{
+.active{
   margin: 0% 2%;
   background-color: #cd408f;
   width: 5%;
   height: 2%;
 }
 
-/* Slide 2 CSS */
-
-.workSlide2{
-  width: 75%;
-  opacity: 1;
-  transition: opactiy 2s;
-}
-
-.workSlideImg2{
-  opacity: 1;
-  transition: opactiy 2s;
-}
-
-.workSlideBtn2{
+.unactive{
   margin: 0% 2%;
   background-color: #1976d2;
   width: 5%;
   height: 2%;
 }
 
-/* Slide 3 CSS */
-
-.workSlide3{
-  width: 75%;
-  opacity: 1;
-  transition: opactiy 2s;
+.workchildRightGrandChildLeft {
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
 }
 
-.workSlideImg3{
-  opacity: 1;
-  transition: opactiy 2s;
+.workchildRightGrandChildRight {
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
 }
 
-.workSlideBtn3{
-  margin: 0% 2%;
-  background-color: #1976d2;
-  width: 5%;
-  height: 2%;
+.opacityZero {
+  opacity: 0;
 }
+
+
 

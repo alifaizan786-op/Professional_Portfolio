@@ -5,6 +5,28 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Button from "@mui/material/Button";
 
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: -20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const styles = {
   headerParent: {
     display: "flex",
@@ -37,6 +59,40 @@ const styles = {
   },
 };
 
+const navObj = [
+  {
+    link: "#techStack",
+    text: "Tech Stack",
+  },
+  {
+    link: "#work",
+    text: "Work",
+  },
+  {
+    link: "#techStack",
+    text: "Resume",
+  },
+];
+
+const socialObj = [
+  {
+    icon : <LinkedInIcon />,
+    link : "https://www.linkedin.com/in/faizan-ali-iruna-digital/"
+  },
+  {
+    icon : <InstagramIcon />,
+    link : "https://www.instagram.com/ali_faizan00/"
+  },
+  {
+    icon : <AlternateEmailIcon />,
+    link : "mailto:abc@example.com?subject = Need Developer&body = Message"
+  },
+  {
+    icon : <WhatsAppIcon />,
+    link : "https://wa.me/4049185805"
+  },
+]
+
 export default function Header() {
   return (
     <div style={styles.headerParent}>
@@ -48,80 +104,45 @@ export default function Header() {
         </Button>
       </div>
       <div style={styles.headerChildCenter}>
-        <ul style={styles.nav}>
-          <li>
-            <Button
-              onClick={() =>
-                window.location.href = '#techStack'
-              }
-            >
-              Tech Stack
-            </Button>
-          </li>
-          <li>
-            <Button
-              onClick={() =>
-                window.location.href = '#work'
-              }
-            >
-              Work
-            </Button>
-          </li>
-          <li>
-            <Button
-              onClick={() =>
-                window.open("https://www.geeksforgeeks.org", "_blank")
-              }
-            >
-              Resume
-            </Button>
-          </li>
-        </ul>
+        <motion.ul
+          style={styles.nav}
+          className="container"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+          {navObj.map((navItem, index) => (
+            <motion.li key={index} className="item" variants={item}>
+              <Button onClick={() => (window.location.href = navItem.link)}>
+                {navItem.text}
+              </Button>
+            </motion.li>
+          ))}
+        </motion.ul>
       </div>
       <div style={styles.headerChildSide}>
-        <ul style={styles.socialIcons}>
-          <li>
-            <Button
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/faizan-ali-iruna-digital/",
-                  "_blank"
-                )
-              }
-            >
-              <LinkedInIcon />
-            </Button>
-          </li>
-          <li>
-            <Button
-              
-              onClick={() =>
-                window.open("https://www.instagram.com/ali_faizan00/", "_blank")
-              }
-            >
-              <InstagramIcon />
-            </Button>
-          </li>
-          <li>
-            <Button
-              onClick={() =>
-                window.open(
-                  "mailto:abc@example.com?subject = Need Developer&body = Message",
-                  "_blank"
-                )
-              }
-            >
-              <AlternateEmailIcon />
-            </Button>
-          </li>
-          <li>
-            <Button
-              onClick={() => window.open("https://wa.me/4049185805", "_blank")}
-            >
-              <WhatsAppIcon />
-            </Button>
-          </li>
-        </ul>
+      <motion.ul
+          className="container"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          style={styles.socialIcons}
+        >
+        {socialObj.map((socialItem, index)=>(
+          <motion.li key={index} className="item" variants={item}>
+          <Button
+            onClick={() =>
+              window.open(
+                socialItem.link,
+                "_blank"
+              )
+            }
+          >
+            {socialItem.icon}
+          </Button>
+        </motion.li>
+        ))}
+        </motion.ul>
       </div>
     </div>
   );
