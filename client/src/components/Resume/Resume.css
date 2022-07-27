@@ -1,0 +1,35 @@
+#resume {
+    display: flex;
+    width: 100vw;
+}
+
+.resumeChildLeft{
+    background-color: aqua;
+    width: 45%;
+    height: 10vh;
+}
+
+.resumeChildCenter{
+    background-color: bisque;
+    width: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    background-color: black;
+    width: 1px;
+    height: 10vh;
+    margin: 30px 0px;
+}
+
+.resumeChildRight{
+    background-color: aquamarine;
+    width: 45%;
+    height: 10vh;
+}
+
+

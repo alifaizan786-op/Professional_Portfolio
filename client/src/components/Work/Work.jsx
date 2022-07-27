@@ -5,6 +5,10 @@ import Drip_Brothers_E_Commerce_by_Faizan_Ali_1 from "../../assets/Work_Assets/D
 import Malani_Employee_Portal_by_Faizan_Ali_1 from "../../assets/Work_Assets/Malani_Employee_Portal_by_Faizan_Ali/Malani_Employee_Portal_by_Faizan_Ali_1.jpg";
 import Button from "@mui/material/Button";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css/bundle";
+
 const projects = [
   {
     projectType: "Front-End Development",
@@ -62,8 +66,6 @@ const projects = [
 export default function Work() {
   const [slideNum, setSlideNum] = React.useState(0);
 
-
-
   return (
     <>
       <div id="work">
@@ -71,48 +73,119 @@ export default function Work() {
           <h1>Portfolio</h1>
         </div>
         <div className="workChildRight">
-          <div className="workchildRightGrandChildLeft">
-            <div className="workSlide1">
-              <h1>{projects[slideNum].projectType}</h1>
-              <h3>Client : {projects[slideNum].clientName}</h3>
-              <h3>
-                Stack :{" "}
-                {projects[slideNum].techStack.map((item, index) => (
-                  <a key={index} href={item.link}>
-                    {item.name},
-                  </a>
-                ))}
-              </h3>
-              <p>{projects[slideNum].descriptionOne}</p>
-              <p>{projects[slideNum].descriptionTwo}</p>
-              <Button variant="outlined">Watch More</Button>
-            </div>
-          </div>
-          <div className="workchildRightGrandChildRight">
-            <div className="workSlideImg1">
-              <img src={projects[slideNum].image} />
-            </div>
-          </div>
-          <div className="workSectionBtn">
-            <span
-              onClick={() => {
-                setSlideNum(0);
-              }}
-              className={slideNum === 0 ? "active" : "unactive"}
-            ></span>
-            <span
-              onClick={() => {
-                setSlideNum(1);
-              }}
-              className={slideNum === 1 ? "active" : "unactive"}
-            ></span>
-            <span
-              onClick={() => {
-                setSlideNum(2);
-              }}
-              className={slideNum === 2 ? "active" : "unactive"}
-            ></span>
-          </div>
+          <Swiper
+            // install Swiper modules
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            <SwiperSlide>
+              <div
+                style={{
+                  display: "flex",
+                  alignContent: "center",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <div className="workchildRightGrandChildLeft">
+                  <div className="workSlide1">
+                    <h1>{projects[0].projectType}</h1>
+                    <h3>Client : {projects[0].clientName}</h3>
+                    <h3>
+                      Stack :{" "}
+                      {projects[0].techStack.map((item, index) => (
+                        <a key={index} href={item.link}>
+                          {item.name},
+                        </a>
+                      ))}
+                    </h3>
+                    <p>{projects[0].descriptionOne}</p>
+                    <p>{projects[0].descriptionTwo}</p>
+                  </div>
+                </div>
+                <div className="workchildRightGrandChildRight">
+                  <div className="workSlideImg1">
+                    <img src={projects[0].image} />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                style={{
+                  display: "flex",
+                  alignContent: "center",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <div className="workchildRightGrandChildLeft">
+                  <div className="workSlide1">
+                    <h1>{projects[1].projectType}</h1>
+                    <h3>Client : {projects[1].clientName}</h3>
+                    <h3>
+                      Stack :{" "}
+                      {projects[1].techStack.map((item, index) => (
+                        <a key={index} href={item.link}>
+                          {item.name},
+                        </a>
+                      ))}
+                    </h3>
+                    <p>{projects[1].descriptionOne}</p>
+                    <p>{projects[1].descriptionTwo}</p>
+                  </div>
+                </div>
+                <div className="workchildRightGrandChildRight">
+                  <div className="workSlideImg1">
+                    <img src={projects[1].image} />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                style={{
+                  display: "flex",
+                  alignContent: "center",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <div className="workchildRightGrandChildLeft">
+                  <div className="workSlide1">
+                    <h1>{projects[2].projectType}</h1>
+                    <h3>Client : {projects[2].clientName}</h3>
+                    <h3>
+                      Stack :{" "}
+                      {projects[2].techStack.map((item, index) => (
+                        <a key={index} href={item.link}>
+                          {item.name},
+                        </a>
+                      ))}
+                    </h3>
+                    <p>{projects[2].descriptionOne}</p>
+                    <p>{projects[2].descriptionTwo}</p>
+                  </div>
+                </div>
+                <div className="workchildRightGrandChildRight">
+                  <div className="workSlideImg1">
+                    <img src={projects[2].image} />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </>

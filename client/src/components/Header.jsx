@@ -69,7 +69,7 @@ const navObj = [
     text: "Work",
   },
   {
-    link: "#techStack",
+    link: "#resume",
     text: "Resume",
   },
 ];
